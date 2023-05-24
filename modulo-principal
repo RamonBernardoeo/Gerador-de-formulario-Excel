@@ -1,0 +1,14 @@
+// Código principal que irá chamar o formulário que está com o nome de "UserForm1".
+//Autor: Ramon Bernardo
+// Data: 24/05/2023
+
+Sub AbrirFormularioEstoque()
+    Dim formEstoque As UserForm1
+    
+    ' Cria uma nova instância do formulário
+    Set formEstoque = New UserForm1
+
+    
+    ' Exibe o formulário
+    formEstoque.Show
+End Sub
