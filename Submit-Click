@@ -1,4 +1,6 @@
 // Código que excutará as operações ao clicar no botão "Submit"
+//Autor: Ramon Bernardo
+//Data: 24/05/2023
 
 Private Sub Submit_Click()
     Dim Estoque As Worksheet
