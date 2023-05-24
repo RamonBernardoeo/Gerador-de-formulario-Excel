@@ -1,0 +1,29 @@
+// Código que excutará as operações ao clicar no botão "Submit"
+
+Private Sub Submit_Click()
+    Dim Estoque As Worksheet
+    Dim ultimaLinha As Long
+    
+    ' Define a planilha onde os dados serão inseridos
+    Set Estoque = ThisWorkbook.Sheets("Estoque")
+    
+    ' Encontra a última linha preenchida na coluna A
+    ultimaLinha = Estoque.Cells(Estoque.Rows.Count, 1).End(xlUp).Row
+    
+    ' Insere os dados na próxima linha disponível
+    With Estoque
+        .Cells(ultimaLinha + 1, 1).Value = TextBox1.Text ' Produto
+        .Cells(ultimaLinha + 1, 2).Value = TextBox2.Text ' Tipo
+        .Cells(ultimaLinha + 1, 3).Value = TextBox3.Text ' Quantidade
+        .Cells(ultimaLinha + 1, 4).Value = TextBox4.Text ' Entrada
+        .Cells(ultimaLinha + 1, 5).Value = TextBox5.Text ' Saída
+    End With
+    
+    ' Limpa os campos do formulário
+    TextBox1.Text = ""
+    TextBox2.Text = ""
+    TextBox3.Text = ""
+    TextBox4.Text = ""
+    TextBox5.Text = ""
+
+End Sub
